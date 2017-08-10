@@ -1,0 +1,368 @@
+/* currently, desktop.css is optimized for 13" screen*/
+
+body {
+  width: 1000px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* ABBOUT SECTION */
+#About {
+  padding-top: 20px;
+}
+
+#About header {
+  float: left;
+  position: relative;
+  top: 100px;
+  width: 120px;
+  z-index: 10;
+}
+.nav a {
+  display: block;
+
+  height: 60px;
+  width: 60px;
+  margin-top: 10px;
+
+  border: 4px solid #4c4cd6;
+  border-radius: 50%;
+}
+
+
+.whitebox {
+  position: relative;
+  left: 60px;
+  height: 600px;
+  width: 600px;
+
+  background-color: white;
+}
+#About .content {
+  margin: auto;
+  margin-left: 25%;
+  padding-top: 100px;
+  width: 55%;
+}
+#About h1 {
+  margin-top: 50px;
+  line-height: 250%;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px auto 0 auto;
+
+  width: 37.5%;
+}
+.links a {
+  height: 25px;
+}
+.behance {
+  display: block;
+  width: 30px;
+
+  background: url(../assets/images/svg/Behance.svg) center / contain no-repeat;
+}
+.github {
+  width: 30px;
+  display: block;
+  background: url(../assets/images/svg/Github.svg) center / contain no-repeat;
+}
+.resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+
+  font-family: Koliko;
+  letter-spacing: 0.75pt;
+  font-size: 20px;
+}
+.resume > span {
+  height: 20px;
+
+  display: block;
+  text-align: center;
+  color: black;
+}
+.resume > span > span {
+  color: gray;
+}
+
+.scroll {
+  display: inline-block;
+  position: relative;
+  bottom: 2px;
+
+  font-size: 50%;
+  font-family: Koliko;
+  color: #e6ebec;
+  letter-spacing: 1.2pt;
+
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  transform: rotate(-90deg);
+}
+.scroll::before {
+  display: inline-block;
+  content: "";
+  height: 2px;
+  width: 60px;
+  background: #e6ebec;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.me-div {
+  float: right;
+  margin-top: -500px;
+  position: relative;
+  right: 50px;
+}
+.me {
+
+  /*-webkit-clip-path: polygon(2% 5%, 100% 4%, 100% 93%, 2% 94%);
+  clip-path: polygon(2% 5%, 100% 4%, 100% 93%, 2% 94%);*/
+
+  /*slanted lines*/
+  -webkit-clip-path: polygon(2% 10%, 100% 0%, 100% 90%, 2% 100%);
+  clip-path: polygon(2% 10%, 100% 0%, 100% 90%, 2% 100%);
+
+  /*circle*/
+  /*-webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);*/
+}
+.me-div::before {
+  display: block;
+  height: 10px;
+  background-image: url(../assets/images/svg/blue_line.svg);
+  background-repeat: no-repeat;
+  content: "";
+
+  position: relative;
+  top: 30px;
+  right: 40px;
+  z-index: 1;
+  width: 120%;
+
+  -ms-transform: rotate(-10deg); /* IE 9 */
+  -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+  transform: rotate(-10deg);
+}
+.me-div::after {
+  display: block;
+  height: 10px;
+  background-image: url(../assets/images/svg/blue_line.svg);
+  background-repeat: no-repeat;
+  content: "";
+
+  position: relative;
+  bottom: 30px;
+  left: 0px;
+  z-index: 1;
+  width: 120%;
+
+  -ms-transform: rotate(-10deg); /* IE 9 */
+  -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+  transform: rotate(-10deg);
+}
+
+/* ART SECTION */
+#Art {
+  height: 600px;
+}
+.coloured-back {
+  width: 100%;
+  height: 585px;
+  max-height: 800px;
+
+  position: absolute;
+  left: 0;
+  z-index: -3;
+
+  /*-ms-transform: skewY(-10deg);
+  -webkit-transform: skewY(-10deg);
+  transform: skewY(-10deg);*/
+
+  background: #d2dae2;
+}
+.coloured-back img {
+  opacity: 0.3;
+}
+
+#Art header {
+  float: none;
+  position: relative;
+  top: 100px;
+}
+
+#Art .content {
+  float: left;
+  padding-top: 200px;
+  padding-left: 100px;
+  width: 40%;
+}
+
+#Art .shack-back {
+  float:left;
+  width: 60%  ;
+  height: 585px;
+  background: url(../assets/images/shack_muted.png) center / contain no-repeat;
+  position: relative;
+  z-index: -2;
+}
+
+#Art p {
+  font-size: 1.3em;
+}
+
+.behance-link {
+  margin-top: 50px;
+  margin-left: 40px;
+}
+
+
+.perspective-wrapper {
+  float: left;
+  margin-right: -50px;
+  margin-top: -100px;
+  perspective: 500px;
+}
+.tile-container {
+  height: 736px;
+  width: 496px;
+
+  transform: rotateY(-30deg) rotateX(30deg) rotateZ(5deg);
+}
+.tile-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  float: left;
+  width: 30%;
+  height: 100%;
+  margin-right: 7px;
+}
+.tile {
+  display: block;
+  height: 30%;
+  margin-bottom: 7px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+
+  transition-property: all;
+  transition: linear 0.1s;
+}
+.tile:hover {
+  transform: translateX(-5px) scale(1.05);
+  box-shadow: 10px 5px 25px -10px rgba(0,0,0,0.5);
+
+}
+
+/* PROJECTS SECTION */
+#Projects header {
+  position: relative;
+  top: 100px;
+}
+.carousel-container {
+  height: 600px;
+  position: relative;
+}
+.carousel-container .carousel-items {
+  height: 100%;
+  width: 95%;
+  float: left;
+}
+.carousel-container .selectors {
+  width: 5%;
+  float: left;
+  height: 500px;
+  margin: 50px 0;
+
+  border-left: 1px solid #0c5fdc;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.selectors button {
+  margin: 0 10px 40px 10px;
+  height: 40px;
+  font-family: Koliko;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+
+  color: #c4d0de;
+  /*border-bottom: 3px solid #d4dde7;*/
+}
+.selectors .button-bar {
+  display: block;
+  height: 2px;
+  width: 20px;
+  margin: 0 auto;
+  background: #c4d0de;
+}
+.selectors .button-bar-inner {
+  display: block;
+  height: 2px;
+  width: 0px;
+  background: #0c5fdc;
+}
+.selectors button.current-button {
+  color: #0c5fdc;
+}
+.selectors button.current-button .button-bar-inner {
+  width: 20px;
+  transition: width linear 5s;
+}
+
+.carousel-items li {
+  height: 100%;
+  width: 95%;
+  position: absolute;
+  top: 0px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity ease-out 0.5s, visibility ease-out 0.5s 0.5s;
+}
+.carousel-container li.current {
+  opacity: 1;
+  transition: opacity ease-in 0.5s 0.5s;
+
+  visibility: visible;
+}
+
+.carousel-container .content {
+  height: 100%;
+  width: 50%;
+  padding: 0 100px;
+
+  float: left;
+}
+.project-graphic {
+  height: 100%;
+  width: 50%;
+  float: left;
+
+  padding-right: 40px;
+  /*background: red;*/
+}
+.project-graphic-img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.carousel-items h1 {
+  margin-top: 150px;
+}
+.carousel-items p {
+  height: 150px;
+  font-size: 1.3em;
+}
+.content .project-link {
+  margin-top: 50px;
+  margin-left: 75px;
+}

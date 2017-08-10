@@ -1,0 +1,135 @@
+@font-face {
+  font-family: Acre;
+  src: url(../assets/fonts/Acre.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: Koliko;
+  src: url(../assets/fonts/koliko-Regular.ttf);
+  font-weight: normal;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #e6ebec;
+}
+
+body {
+  background: url(../assets/grid.svg) center repeat;
+}
+
+section {
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: Acre;
+  font-weight: normal;
+  color: #223951;
+  font-size: 2.5em;
+}
+
+p {
+  font-family: Acre;
+  color: #455c74;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.section-title {
+  padding: 17px 25px 13px 25px;
+
+  background-color: #4c4cd6;
+  color: #e6ebec;
+  font-family: Koliko;
+  font-size: 1.75em;
+  letter-spacing: 0.1em;
+}
+.section-title:visited {
+  color: #e6ebec;
+}
+
+.replace-with-logo-img {
+  background: url(../assets/images/svg/signature.svg) left/contain no-repeat;
+  height: 40px;
+  /*font-family: Koliko;
+  font-weight: normal;
+  color: #8b9aaa;*/
+}
+
+
+
+.link-btn {
+  display: inline-block;
+
+  overflow: hidden;
+  font: 1.3em Koliko;
+  padding: 0.79em 1em 0.61em 1em;
+
+  letter-spacing: 1pt;
+  color: white;
+  background: #455c74;
+
+  transition: all linear 0.15s;
+}
+.link-btn:after {
+  display: inline-block;
+  content: "";
+  background: url(../assets/images/svg/arrow.svg) top/contain no-repeat;
+  width: 0.25em;
+  height: 0.55em;
+  margin-left: -0.25em;
+  /*margin-bottom: 2px;*/
+  opacity: 0;
+
+  transition: all linear 0.15s;
+}
+.link-btn:hover {
+  background: #4c4cd6;
+  /*left: 30px;*/
+  transform: translateX(-0.3em);
+}
+.link-btn:hover::after {
+  opacity: 1;
+  margin-left: 0.35em;
+}
+
+
+/*Background Pictures Remove important later*/
+.waffles {
+  background: url(../assets/images/waffles.png) center / cover no-repeat;
+}
+.deuality {
+  background: url(../assets/images/deuality.png) center / cover no-repeat;
+}
+.shack {
+  background: url(../assets/images/shack.png) center / cover no-repeat;
+}
+.ds {
+  background: url(../assets/images/ds.png) center / cover no-repeat;
+}
+.earth {
+  background: url(../assets/images/Ruins.png) center / cover no-repeat;
+}
+.mountains {
+  background: url(../assets/images/mountains.png) center / cover no-repeat;
+}
+.snowy {
+  background: url(../assets/images/snowy.png) center / cover no-repeat;
+}
