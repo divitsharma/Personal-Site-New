@@ -133,3 +133,35 @@ button {
 .snowy {
   background: url(../assets/images/snowy.png) center / cover no-repeat;
 }
+
+
+/* Project Graphic Images */
+.slide-graphic {
+  background: url("../assets/images/test1.png") center / contain no-repeat;
+}
+.maps-ar-graphic {
+  background: url("../assets/images/maps_ar_demo.png") center / contain no-repeat;
+}
+.deuality-graphic {
+  background: url("../assets/images/deuality_mockup.png") center / contain no-repeat;
+}
+.obj-trkr-graphic {
+  background: url("../assets/images/obj_trkr_vid.png") center / contain no-repeat;
+}
+.wall-clock-graphic {
+  background: url("../assets/images/wall_clock_mockup.png") center / contain no-repeat;
+}
+
+/* Video popup */
+.video-popup {
+  position: fixed;
+  left: 0;
+  z-index: 20;
+
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.8);
+
+  visibility: hidden;
+  transition: visibility 3s ease-in;
+}

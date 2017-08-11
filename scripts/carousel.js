@@ -21,12 +21,13 @@ function carousel () {
 
         var next_ind = ind + 1;
         if (next_ind == selectors.length) next_ind = 0;
-        setTimeout(function () {
-            setActive(next_ind)
-        }, 5000); // NOTE: DELAY DOES NOT WORK IF ANYTHING IS CLICKED!!
+
+        // setTimeout(function () {
+        //     setActive(next_ind)
+        // }, 5000); // NOTE: DELAY DOES NOT WORK IF ANYTHING IS CLICKED!!
     }
 
-    setActive(0);
+    setActive(3);
 
     selectors[0].addEventListener('click', function (ev) {
         setActive(0);

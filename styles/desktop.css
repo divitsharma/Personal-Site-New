@@ -6,7 +6,7 @@ body {
   min-height: 100vh;
 }
 
-/* ABBOUT SECTION */
+/* ABOUT SECTION */
 #About {
   padding-top: 20px;
 }
@@ -352,7 +352,37 @@ body {
 .project-graphic-img {
   height: 100%;
   width: 100%;
-  object-fit: contain;
+}
+
+/* For video play button */
+.obj-trkr-graphic {
+  position: relative;
+}
+.obj-trkr-graphic div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  position: absolute;
+  width: 100%;
+  bottom: 100px;
+}
+.obj-trkr-graphic button {
+  font: 1em Koliko;
+  letter-spacing: 1pt;
+
+}
+.obj-trkr-graphic button:after {
+  display: inline-block;
+  content: "";
+  background: url(../assets/images/svg/arrow_black.svg) top/contain no-repeat;
+  width: 0.25em;
+  height: 0.55em;
+  margin-left:3px;
+  transition: 0.1s ease-out;
+}
+.obj-trkr-graphic button:hover:after {
+  margin-left: 8px;
 }
 
 .carousel-items h1 {
