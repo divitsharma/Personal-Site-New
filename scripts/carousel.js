@@ -57,6 +57,7 @@ var art = document.getElementById('Art');
 var carousel_trigger_height = about.clientHeight +
                               (0.4*art.clientHeight);
 
+// NOTE: Offset width doesnt work for large screens, where people have to scroll less
 function scrollHandle (ev) {
 
   if (!carousel_reached && window.pageYOffset > carousel_trigger_height) {
