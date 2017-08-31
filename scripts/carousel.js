@@ -50,20 +50,26 @@ function carousel () {
 
 };
 
-var carousel_reached = false;
 
-var about = document.getElementById('About');
-var art = document.getElementById('Art');
-var carousel_trigger_height = about.clientHeight +
-                              (0.4*art.clientHeight);
 
-// NOTE: Offset width doesnt work for large screens, where people have to scroll less
-function scrollHandle (ev) {
+window.addEventListener('load', function (ev) {
+  var carousel_reached = false;
 
-  if (!carousel_reached && window.pageYOffset > carousel_trigger_height) {
-    carousel();
-    carousel_reached = true;
+  var about = document.getElementById('About');
+  var art = document.getElementById('Art');
+  var carousel_trigger_height = about.clientHeight +
+                                (0.4*art.clientHeight);
+
+  // NOTE: Offset width doesnt work for large screens, where people have to scroll less
+  // maybe use cur page position instead
+  function scrollHandle (ev) {
+
+    if (!carousel_reached && window.pageYOffset > carousel_trigger_height) {
+      carousel();
+      carousel_reached = true;
+    }
   }
-}
 
-window.onscroll = scrollHandle;
+  window.onscroll = scrollHandle;
+
+});
